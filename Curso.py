@@ -93,4 +93,33 @@ class Curso:
 
         return hayCinco
     
-                          
+
+    # Encontrar a las 3 primeras notas de 1.5 y asigarle 2.5
+    def notasIguales(self):
+            notasIguales = 0
+
+            for nota in self.__notas:
+                if (nota == 1.5):
+                    nota = 2.5
+                    notasIguales += 1
+                elif (notasIguales == 3):
+                    break
+            
+            return notasIguales
+    
+
+    #Retornar la posicion de la secuencia de la 3 nota con valo 5, si dicha nota no aparece 3 veces el metodo debe retornar el valor de -1
+    def retornar(self):
+
+        indice = 0
+
+        for i in range (len(self.__notas)):
+            if self.__notas[1] == 5:
+                indice += 1 
+            if indice == 3:
+                    break 
+        return -1
+    
+            
+
+
